@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637822288794222972
+      ticks: 637828343030106594
     m_Hash: 659951101
   m_LockFileStatus:
     m_FilePath: C:/Users/user/Documents/GitHub/110-2MonClass_3D/3D-Game/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637822288794222972
+      ticks: 637828343030106594
     m_Hash: 1413613287
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

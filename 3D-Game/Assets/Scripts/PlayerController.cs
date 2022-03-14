@@ -6,9 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
 
-    public float jumpForce = 10;
-    public float gravityModifier = 1;
-    public bool isOnGround = true;
+    public float jumpForce = 10;   //跳躍力道
+    public float gravityModifier = 1;   //系統物理重力
+    public bool isOnGround = true;   //是否站在地板上
+    private bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-        private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter(Collision other) 
+        {
+        if (other.gameObject.CompareTag("Ground"))
+        {
             isOnGround = true;
+        }
+        else if (other.gameObject.CompareTag("Obstracte"))
+        {
+            gameOver = true;
+            print("遊戲結束!");
+        }
+            
         }       
 }
