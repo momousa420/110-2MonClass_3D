@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ObjDestroyed : MonoBehaviour
 {
+
+    public float leftBound = -15;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +16,10 @@ public class ObjDestroyed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x<-15)
+        if (transform.position.x<leftBound && gameObject.CompareTag("Obstracte"))
         {
-            GameObject.Destroy(gameObject);
+            Destroy(gameObject);
+            print("»ÙÃªª«§R°£");
         }
     }
 }

@@ -9,13 +9,16 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10;   //跳躍力道
     public float gravityModifier = 1;   //系統物理重力
     public bool isOnGround = true;   //是否站在地板上
-    private bool gameOver = false;
+    public bool gameOver = false;
+
+    private Animator plAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
+        plAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
             isOnGround = false;
+            plAnim.SetTrigger("Jump_trig");
 
         }
     }

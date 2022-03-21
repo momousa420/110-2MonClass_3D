@@ -245,8 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02e3b4fd6ec9a04abfa0b1c339d8bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obPrefab: {fileID: 5599557586143173812, guid: 21d5adcfc7d5d5f4a8f53f91d4f2341b, type: 3}
-  spawnPos: {x: 25, y: 0, z: 0}
+  obPrefab:
+  - {fileID: 5599557586143173812, guid: 21d5adcfc7d5d5f4a8f53f91d4f2341b, type: 3}
+  - {fileID: 0}
+  spawnPos: {x: 30, y: 0, z: 0}
   starDelay: 2
   repeatRate: 3
 --- !u!4 &316409375
@@ -470,6 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  leftBound: -15
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +566,7 @@ Transform:
   m_LocalScale: {x: 5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619369838190560266 stripped
 GameObject:
@@ -582,9 +585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f92bbe41d25e244955ad2466e2d1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 12
-  gravityModifier: 2
+  jumpForce: 20
+  gravityModifier: 5
   isOnGround: 1
+  gameOver: 0
 --- !u!1001 &5599557585971523817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -649,9 +653,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1552725507550364185, guid: 9d2b249240591c645b91404c421872b2, type: 3}
+      propertyPath: m_Constraints
+      value: 82
+      objectReference: {fileID: 0}
     - target: {fileID: 7407494713543726755, guid: 9d2b249240591c645b91404c421872b2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7407494713543726755, guid: 9d2b249240591c645b91404c421872b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,7 +675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7407494713543726755, guid: 9d2b249240591c645b91404c421872b2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 7407494713543726755, guid: 9d2b249240591c645b91404c421872b2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -675,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7407494713543726755, guid: 9d2b249240591c645b91404c421872b2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 7407494713543726755, guid: 9d2b249240591c645b91404c421872b2, type: 3}
       propertyPath: m_LocalRotation.z
