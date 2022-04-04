@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] obPrefab;
+    public int obIndex;
 
     public Vector3 spawnPos = new Vector3(30, 0, 0);
 
@@ -30,7 +31,8 @@ public class SpawnManager : MonoBehaviour
     {
         if (PController.gameOver == false)
         {
-            Instantiate(obPrefab[0], spawnPos, transform.rotation);
+            obIndex = Random.Range(0, obPrefab.Length);
+            Instantiate(obPrefab[obIndex], spawnPos, transform.rotation);
         }
        
     }

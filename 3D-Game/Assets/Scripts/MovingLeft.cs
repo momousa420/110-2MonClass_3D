@@ -24,7 +24,7 @@ public class MovingLeft : MonoBehaviour
 
         if (transform.position.x < leftBound && gameObject.CompareTag("Obstracte"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             print("»ÙÃªª«§R°£");
         }
     }
